@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FriendItem from './FriendItem'
 import { connect } from 'react-redux'
-import URL_ROOT from '../URL'
+import {URL_ROOT_API} from '../URL'
 
 
 class FriendsPage extends Component {
@@ -12,7 +12,7 @@ class FriendsPage extends Component {
   }
 
   handleRemoveFriend = (f) => {
-    fetch(`${URL_ROOT}friendships/${this.props.user_id}/${f.id}`, {
+    fetch(`${URL_ROOT_API}friendships/${this.props.user_id}/${f.id}`, {
           method: 'delete',
           headers: {
             'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ class FriendsPage extends Component {
   }
 
   handleAddFriend = (f) => {
-    fetch(`${URL_ROOT}users/${this.props.user_id}/friendships`, {
+    fetch(`${URL_ROOT_API}users/${this.props.user_id}/friendships`, {
           method: 'post',
           headers: {
             'Content-Type': 'application/json'

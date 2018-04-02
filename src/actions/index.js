@@ -1,4 +1,4 @@
-import URL_ROOT from '../URL'
+import { URL_ROOT_API, URL_ROOT_BASE } from '../URL'
 
 export function login(u, user_name) {
   return dispatch => {
@@ -9,7 +9,7 @@ export function login(u, user_name) {
 
 export function getCurrentUser() {
   return dispatch => {
-    fetch(`http://localhost:3001/current_user`, {
+    fetch(`${URL_ROOT_BASE}current_user`, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: localStorage.getItem('token')
@@ -28,19 +28,19 @@ export function getCurrentUser() {
 
 export function loadData(user_id) {
   return dispatch => {
-    fetch(`${URL_ROOT}users/${user_id}/ideas`)
+    fetch(`${URL_ROOT_API}users/${user_id}/ideas`)
     .then(res => res.json())
     .then(res =>{
        dispatch({type: 'LOAD_IDEAS', ideas: res})})
 
-    fetch(`${URL_ROOT}users/${user_id}/friendships`)
+    fetch(`${URL_ROOT_API}users/${user_id}/friendships`)
     .then(res=> res.json())
     .then(res => {
       dispatch({type: 'LOAD_FRIENDS', friends: res.friends})
       dispatch({type: 'LOAD_NONFRIENDS', nonFriends: res.nonFriends})
     })
 
-    fetch(`${URL_ROOT}invitations/${user_id}`)
+    fetch(`${URL_ROOT_API}invitations/${user_id}`)
     .then(res=> res.json())
     .then(res => {
       dispatch({type: 'LOAD_INVITATIONS', invitations: res})

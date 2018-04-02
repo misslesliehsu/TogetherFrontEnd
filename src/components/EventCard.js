@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import URL_ROOT from '../URL'
+import {URL_ROOT_API} from '../URL'
 import { connect } from 'react-redux'
 import FriendItem from './FriendItem'
 import DateSuggestionItem from './DateSuggestionItem'
@@ -62,7 +62,7 @@ class eventCard extends Component {
   handleRSVP = (e) => {
       if (e.target.name === 'yes') {
           this.setState({accepted: true}, () => {
-            fetch(`${URL_ROOT}invitations/${this.props.match.params.id}/${this.props.user_id}`, {
+            fetch(`${URL_ROOT_API}invitations/${this.props.match.params.id}/${this.props.user_id}`, {
                     method: 'put',
                     headers: {
                       'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ class eventCard extends Component {
       }
       else {
         this.setState({accepted: false}, () =>     {
-          fetch(`${URL_ROOT}invitations/${this.props.match.params.id}/${this.props.user_id}`, {
+          fetch(`${URL_ROOT_API}invitations/${this.props.match.params.id}/${this.props.user_id}`, {
                   method: 'put',
                   headers: {
                     'Content-Type': 'application/json'

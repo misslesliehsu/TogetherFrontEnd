@@ -3,7 +3,7 @@ import './App.css';
 import './DateTime.css'
 import Header from './components/Header'
 import Main from './components/Main'
-import URL_ROOT from './URL'
+import URL_ROOT_API from './URL'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { getCurrentUser, loadData } from './actions'

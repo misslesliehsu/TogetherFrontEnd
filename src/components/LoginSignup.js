@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import URL_ROOT from '../URL'
+import { URL_ROOT_API, URL_ROOT_BASE } from '../URL'
 import { connect } from 'react-redux'
 import { loadData, login } from '../actions'
 import { Image, Button } from 'semantic-ui-react'
@@ -27,7 +27,7 @@ class LoginSignup extends Component {
   handleSubmit = (e) => {
     //logging in
     if (e.target.name ==='login'){
-      fetch(`http://localhost:3001/login`, {
+      fetch(`${URL_ROOT_BASE}login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ class LoginSignup extends Component {
         }
       }
       else {
-        fetch(`http://localhost:3001/signup`, {
+        fetch(`${URL_ROOT_BASE}signup`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

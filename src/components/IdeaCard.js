@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import URL_ROOT from '../URL'
+import {URL_ROOT_API} from '../URL'
 import { connect } from 'react-redux'
 import FriendItem from './FriendItem'
 import DateSuggestionItem from './DateSuggestionItem'
@@ -15,14 +15,14 @@ class ideaCard extends Component {
   }
 
   componentDidMount() {
-    fetch(`${URL_ROOT}users/${this.props.user_id}/ideas/${this.props.match.params.id}/idea_comments`)
+    fetch(`${URL_ROOT_API}users/${this.props.user_id}/ideas/${this.props.match.params.id}/idea_comments`)
     .then(res => res.json())
     .then(res=> this.setState({idea_comments: [...res]}))
   }
 
 
   handleCountOut = () => {
-    fetch(`${URL_ROOT}invitations/${this.props.match.params.id}/${this.props.user_id}`, {
+    fetch(`${URL_ROOT_API}invitations/${this.props.match.params.id}/${this.props.user_id}`, {
           method: 'delete',
           headers: {
             'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ class ideaCard extends Component {
 
 
   handleCommentSubmission = () => {
-    fetch(`${URL_ROOT}users/${this.props.user_id}/ideas/${this.props.match.params.id}/idea_comments`,
+    fetch(`${URL_ROOT_API}users/${this.props.user_id}/ideas/${this.props.match.params.id}/idea_comments`,
     {
       method: 'POST',
       headers: {

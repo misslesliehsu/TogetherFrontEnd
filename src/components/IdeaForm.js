@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import FriendItem from './FriendItem'
-import URL_ROOT from '../URL.js'
+import {URL_ROOT_API} from '../URL.js'
 import { withRouter } from 'react-router-dom'
 import { Card } from 'semantic-ui-react'
 import Datetime from 'react-datetime'
@@ -68,7 +68,7 @@ class IdeaForm extends Component {
   }
 
   handleDelete = () => {
-    fetch(`${URL_ROOT}users/${this.props.user_id}/ideas/${this.props.match.params.id}`, {
+    fetch(`${URL_ROOT_API}users/${this.props.user_id}/ideas/${this.props.match.params.id}`, {
       method: 'delete',
       headers: {
         'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ class IdeaForm extends Component {
 
     //for brand new ideas
     if (this.props.purpose === 'new') {
-      fetch(`${URL_ROOT}users/${this.props.user_id}/ideas`, {
+      fetch(`${URL_ROOT_API}users/${this.props.user_id}/ideas`, {
             method: 'post',
             headers: {
               'Content-Type': 'application/json'
@@ -111,7 +111,7 @@ class IdeaForm extends Component {
 
     //for editing existing ideas
     else {
-      fetch(`${URL_ROOT}users/${this.props.user_id}/ideas/${this.props.match.params.id}`, {
+      fetch(`${URL_ROOT_API}users/${this.props.user_id}/ideas/${this.props.match.params.id}`, {
             method: 'put',
             headers: {
               'Content-Type': 'application/json'

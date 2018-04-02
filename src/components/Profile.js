@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Segment} from 'semantic-ui-react'
 import { connect } from 'react-redux'
-import URL_ROOT from '../URL'
+import {URL_ROOT_API} from '../URL'
 
 
 class ProfilePage extends Component {
@@ -24,7 +24,7 @@ class ProfilePage extends Component {
         email: this.state.email
       }
       this.setState({editting: false, button: "Edit Profile"})
-      fetch(`${URL_ROOT}users/${this.props.user.id}`, {
+      fetch(`${URL_ROOT_API}users/${this.props.user.id}`, {
             method: 'put',
             headers: {
               'Content-Type': 'application/json'

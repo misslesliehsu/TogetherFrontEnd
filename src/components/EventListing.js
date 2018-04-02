@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import URL_ROOT from '../URL'
+import {URL_ROOT_API} from '../URL'
 
 class EventListing extends Component {
 
@@ -14,7 +14,7 @@ class EventListing extends Component {
 
   handleRemoveListing = () => {
     const invite = this.props.invitations.find( i => i.idea_id == this.props.e.id)
-    fetch(`${URL_ROOT}invitations/${this.props.e.id}/${this.props.user_id}`, {
+    fetch(`${URL_ROOT_API}invitations/${this.props.e.id}/${this.props.user_id}`, {
           method: 'delete',
           headers: {
             'Content-Type': 'application/json'

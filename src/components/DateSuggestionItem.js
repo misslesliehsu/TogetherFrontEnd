@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import URL_ROOT from '../URL'
+import {URL_ROOT_API} from '../URL'
 import { connect } from 'react-redux'
 
 class DateSuggestionItem extends Component {
@@ -13,7 +13,7 @@ class DateSuggestionItem extends Component {
 
     // if this person is already in the invitees, delete the vote with a fetch delete
     if (voters.some( v => v.id == user_id)) {
-      fetch(`${URL_ROOT}votes/${id}/${user_id}`, {
+      fetch(`${URL_ROOT_API}votes/${id}/${user_id}`, {
             method: 'delete',
             headers: {
               'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ class DateSuggestionItem extends Component {
     }
     else {
       //otherwise, add them as a voter
-      fetch(`${URL_ROOT}votes/${id}/${user_id}`, {
+      fetch(`${URL_ROOT_API}votes/${id}/${user_id}`, {
             method: 'post',
             headers: {
               'Content-Type': 'application/json'

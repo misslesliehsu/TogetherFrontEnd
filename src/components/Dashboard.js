@@ -3,7 +3,7 @@ import IdeasList from './IdeasList'
 import EventsList from './EventsList'
 import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
-import URL_ROOT from '../URL'
+import {URL_ROOT_API} from '../URL'
 
 
 class Dashboard extends Component {

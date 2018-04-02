@@ -1,3 +1,3 @@
-const URL_ROOT = "https://togetherbackend.herokuapp.com/"
+export const URL_ROOT_API = "http://localhost:3001/api/v1/"
 
-export default URL_ROOT
+export const URL_ROOT_BASE = "http://localhost:3001/"

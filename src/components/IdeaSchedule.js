@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import FriendItem from './FriendItem'
-import URL_ROOT from '../URL.js'
+import {URL_ROOT_API} from '../URL.js'
 import { withRouter } from 'react-router-dom'
 import DateSuggestionItem from './DateSuggestionItem'
 import { Card } from 'semantic-ui-react'
@@ -73,7 +73,7 @@ class IdeaScheduleForm extends Component {
       window.alert("Must have a Final Date!")
     }
     else {
-      fetch(`${URL_ROOT}users/${this.props.user_id}/ideas/${this.props.match.params.id}`, {
+      fetch(`${URL_ROOT_API}users/${this.props.user_id}/ideas/${this.props.match.params.id}`, {
             method: 'put',
             headers: {
               'Content-Type': 'application/json'
@@ -115,7 +115,7 @@ class IdeaScheduleForm extends Component {
   }
 
   handleDelete = () => {
-    fetch(`${URL_ROOT}users/${this.props.user_id}/ideas/${this.props.match.params.id}`, {
+    fetch(`${URL_ROOT_API}users/${this.props.user_id}/ideas/${this.props.match.params.id}`, {
       method: 'delete',
       headers: {
         'Content-Type': 'application/json'
