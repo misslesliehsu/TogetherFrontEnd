@@ -1,3 +1,3 @@
-const URL_ROOT = "http://localhost:3001/api/v1/"
+const URL_ROOT = "https://togetherbackend.herokuapp.com/"
 
 export default URL_ROOT
