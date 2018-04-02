@@ -39,6 +39,7 @@ class FriendsPage extends Component {
 
 
   render() {
+    console.log(this.state.input)
     let withoutSelfResults = this.state.results.filter( f => f.id !==this.props.user_id)
     let withoutSelfAll = this.props.nonFriends.filter( f => f.id !==this.props.user_id)
 
@@ -54,15 +55,16 @@ class FriendsPage extends Component {
 
           <h1>Search for more Friends:</h1>
           <div>
-            <input type="text" value={this.props.input} onChange={this.handleChange} tabindex="0" class="prompt" autoComplete="off" />
-            <i aria-hidden="true" class="search icon"></i>
+            <input type="text" value={this.props.input} onChange={this.handleChange} tabindex="0" autoComplete="off" />
+            <i aria-hidden="true" className="search icon"></i>
           </div>
-<br></br><br></br><br></br><br></br>
+            <br></br><br></br><br></br><br></br>
           <div style={{display:'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr'}}>
             {this.state.input === '' ?
-              withoutSelfAll.map(f => <FriendItem key={f.id} buttonAction={this.handleAddFriend} label='Add Friend' friend={f}/>)
-              :
-              withoutSelfResults.map(f => <FriendItem key={f.id} buttonAction={this.handleAddFriend} label='Add Friend' friend={f}/>)}
+                    withoutSelfAll.map(f => <FriendItem key={f.id} buttonAction={this.handleAddFriend} label='Add Friend' friend={f}/>)
+                    :
+                    withoutSelfResults.map(f => <FriendItem key={f.id} buttonAction={this.handleAddFriend} label='Add Friend' friend={f}/>)
+                  }
           </div>
         </div>
       </div>

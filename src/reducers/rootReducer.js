@@ -19,11 +19,11 @@ const ideasReducer = (state = {ideas: ["start"], events: ['start'], friends: ["s
     case "LOAD_INVITATIONS":
       return {...state, invitations: action.invitations}
     case "ADD_FRIEND":
-      var updatedNonFriends = state.nonFriends.filter( nF => {nF.id != action.friend.id})
+      var updatedNonFriends = state.nonFriends.filter( nF => nF.id !== action.friend.id)
       return {...state, nonFriends: updatedNonFriends, friends: [...state.friends, action.friend]}
     case "REMOVE_FRIEND":
-      var updatedFriends = state.friends.filter( f => f.id != action.friend.id)
-      return {...state, friends: updatedFriends, nonFriend: [...state.nonFriends, action.friend]}
+      var updatedFriends = state.friends.filter( f => f.id !== action.friend.id)
+      return {...state, friends: updatedFriends, nonFriends: [...state.nonFriends, action.friend]}
     case "ADD_IDEA":
       return {...state, ideas: [...state.ideas, action.idea]}
     case "UPDATE_IDEA":
