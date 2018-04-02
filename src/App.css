@@ -1,0 +1,474 @@
+html * {
+  font-family: 'Boogaloo', cursive;
+}
+
+button:hover {
+  background-color:yellow !important;
+}
+
+input {
+  background-color: #e0e0eb !important
+}
+
+body {
+  background-color: #42c8f4;
+  /*background-image: url("Background2.jpg");*/
+  background-size: 100%;
+}
+
+
+.banner {
+  color:white;
+  font-size: 40px;
+  text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+}
+
+
+.togetherLogoLogin {
+  font-size: 100px;
+  margin-left: 30px;
+  margin-right: 25px;
+  height: 100px;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+}
+
+@keyframes open {
+  0% {
+    font-size: 100px;
+  }
+  20% {
+    font-size: 120px;
+    color:yellow;
+  }
+  30% {
+    font-size: 100px
+  }
+  40% {
+    font-size: 120px;
+  }
+  100% {
+    font-size: 100px;
+  }
+}
+
+
+.App {
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  font-size: 1.5em;
+}
+
+.item:hover {
+  color: yellow !important;
+}
+
+input {
+    width: 90%;
+    height: 20px;
+}
+
+/*
+.fullHeader {
+  color:  #0099cc;
+  padding: 10px;
+}
+.headerLeft {
+  left:0;
+  top: 0;
+  position: absolute;
+  padding: 20px;
+}
+.headerRight {
+  right: 0;
+  top: 0;
+  position: absolute;
+  padding: 20px;
+}*/
+
+.header {
+}
+
+
+.menu {
+  text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+}
+
+.togetherLogo:hover {
+  animation: pulse 0.25s;
+}
+
+@keyframes pulse {
+  0% {
+    font-size: 100px;
+  }
+  25% {
+    font-size: 110px;
+  }
+  50% {
+    font-size: 100px;
+  }
+  100% {
+    font-size: 110px;
+  }
+}
+
+/*@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}*/
+
+.togetherLogo {
+  font-size: 100px;
+  float: left;
+  margin-left: 30px;
+  margin-right: 25px;
+  height: 100px;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+}
+
+.ideaForm {
+  border-radius: 30px;
+  background-color: white;
+  font-size: 25px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-style: solid;
+  border-color: #0099cc;
+  width: 1200px;
+
+}
+
+/* calendar */
+.dateInputField {
+  width: 230px;
+  float: middle;
+  margin-left: 10px;
+  margin-top: 15px;
+  height:40px;
+}
+
+.ideaFormForm input {
+  height:40px;
+}
+
+.signInLogin input {
+  height:40px;
+  background-color: white !important
+}
+
+/*.ardImage {
+  opacity: .5;
+  margin: 0 auto;
+  position: relative;
+}*/
+
+.miniIdea {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin: 20px;
+}
+
+.miniIdeaIcon {
+  animation: rotate infinite 3s;
+  border-radius: 10%;
+  height: 150px;
+  position: relative;
+}
+
+
+.createIdeaButton {
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 10px;
+  border-width: 10px;
+  border-color: #5de5ef;
+}
+
+.createIdeaButton:hover {
+  background-color: yellow;
+}
+
+.scheduleItButton {
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 10px;
+}
+
+
+.miniIdeaCaption {
+  display: block;
+  width: 300px;
+  height: 60px;
+  font-size: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.miniIdeaIcon:hover {
+  animation: shake  0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+/*
+.ideaCard::before {
+  content: url('./plantSeed.jpg');
+  opacity: 0.5;
+  position: relative;
+  margin: 0 auto;
+  z-index: -1
+}*/
+
+.ideaCard {
+  border-radius: 30px;
+  background-color: #cceeff;
+  text-align: center;
+  width: 1200px;
+  /*border-radius: 15%;*/
+  font-size: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-style: double;
+  border-width: 8px;
+  border-color: yellow;
+}
+
+.eventCaption {
+  margin: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+  whiteSpace:nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  height: 20px;
+  font-size: 20px;
+}
+
+.eventCard {
+  text-align: center;
+  width: 1200px;
+  /*border-radius: 15%;*/
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.eventCard .eventData {
+  font-size: 30px;
+  line-height: 2;
+  text-align: left;
+}
+
+.ideaCard .ideaData {
+  font-size: 30px;
+  line-height: 2;
+}
+
+.ideaCard h1 {
+  font-size: 50px;
+}
+
+.ideaData {
+  text-align: left;
+  line-height: 2;
+}
+
+.countOutButton {
+  border-radius: 20px;
+  font-size: 20px;
+  color: red;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@-webkit-keyframes rotate {
+ 0%{-webkit-transform:rotate(0deg)}
+    25%{-webkit-transform:rotate(5deg)}
+    75%{-webkit-transform:rotate(-5deg)}
+    100%{-webkit-transform:rotate(0deg)}
+}
+
+.friendCard {
+  border: solid;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 5px;
+  border-width: 1px;
+  border-color: white;
+  background-color: #ffffff;
+  width: 150px;
+}
+
+.friendCard div div {
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.friendArea {
+  margin-top: 50px;
+}
+
+.searchBar {
+  border-radius: 25px;
+  border: solid;
+  border-color: white;
+  margin: 50px;
+  padding: 20px;
+}
+
+.searchBar input {
+  height: 40px;
+}
+.ideasList {
+  margin: 20px;
+}
+.eventsList {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 10px;
+  border: solid;
+  border-color: #dbe0e0;
+  border-radius: 10px;
+}
+
+.profile Segment {
+  width: 50%;
+}
+
+.profilePic {
+  border-radius: 10px;
+  margin: 10px auto;
+  position: relative;
+  width: 50%;
+}
+
+.voteCheckbox {
+  width: 40px;
+  transform: scale(2) !important;
+}
+.voterPhoto {
+  margin-left: 10px;
+}
+
+.addMoreFriends {
+  background-color: white;
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 300px;
+  overflow: scroll;
+}
+
+.RSVP {
+  font-size: 40px;
+  margin: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.RSVP.Selected {
+  border-width: 20px;
+  border-color: black;
+}
+
+.RSVPbuttonIn {
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: green;
+  border: solid;
+  font-size: 12px;
+}
+
+.RSVPbuttonOut {
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: red;
+  border: solid;
+  font-size: 12px;
+}
+
+.XEventListing {
+  margin: 0 auto;
+  margin-left: 2px;
+  font-size:12px;
+}
+
+.eventListingStar {
+  margin-top: 10px;
+  width: 30px;
+}
+
+.commentsSection {
+  padding: 50px;
+  text-align: left;
+  margin: 50px;
+  margin-left: 150px;
+}
+
+.commentsSection li {
+  float: left;
+}
+
+.comment {
+  margin: 35px;
+  width: auto;
+}
+
+.commentInput {
+  width: 500px;
+  /*float: middle;
+  margin-left: 10px;
+  margin-top: 15px;*/
+  height:35px;
+}
+
+.voterName {
+  background-color: #82ba41;
+  border-style: solid;
+  border-radius:6px;
+  border-width: 2px;
+  margin-top: 10px;
+  width: auto;
+  float: left;
+  font-size: 0.6em;
+  padding: 1px;
+  margin-right: 10px;
+}
