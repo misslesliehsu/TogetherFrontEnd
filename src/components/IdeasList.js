@@ -20,6 +20,8 @@ const IdeasList = (props) =>  {
       <button style={{marginTop:'10px'}} className='createIdeaButton' onClick={handleNewIdea}>Create New Idea</button>}
       <br></br><br></br>
       <div style={{display:'grid', gridTemplateColumns: '1fr 1fr 1fr'}}>
+      {props.ideas.length === 0 && <h3>"No ideas on the board yet!"</h3>}
+
       {props.ideas.map( i =>
         <div className='miniIdea' id={i.id} key={i.id} onClick={handleViewIdea}>
           {i.owner_id === props.user_id ?
