@@ -13,6 +13,8 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
+        <img src={require('../star.png')} style={{height: '20px', marginTop:'10px', marginRight:'0'}}/> Hosted by You
+
         <div style={{display:'grid', gridTemplateColumns:'70% auto'}}>
           <IdeasList history={this.props.history}/>
           <EventsList history={this.props.history}/>
