@@ -16,7 +16,7 @@ const friendItem = (props) => {
       </div>
       :
       <div className='friendCard'>
-        <img className='profilePic' src={props.friend.profile_pic} style={{marginLeft:'35px'}}></img><br></br>
+        {props.friend.profile_pic && <img className='profilePic' src={props.friend.profile_pic} style={{marginLeft:'35px'}}></img><br></br>}
           <div style={{lineHeight:'25px', marginLeft:'30px', marginBottom:'10px'}}>
             {props.friend.first_name + " " + props.friend.last_name}
           </div>
