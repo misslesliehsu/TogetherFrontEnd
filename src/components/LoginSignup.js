@@ -73,7 +73,7 @@ class LoginSignup extends Component {
           body: JSON.stringify(
             {
               user: {
-                email: this.state.signup_email,
+                email: this.state.signup_email.toLowerCase(),
                 password: this.state.signup_password,
                 first_name: this.state.signup_first_name,
                 last_name: this.state.signup_last_name
