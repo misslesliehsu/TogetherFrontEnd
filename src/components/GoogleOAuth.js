@@ -9,6 +9,7 @@ export default class GoogleOAuth extends Component {
 
       script.onload = () => {
         window.gapi.load('client:auth2', this.initClient)}
+      debugger
       document.body.appendChild(script)
   }
 
