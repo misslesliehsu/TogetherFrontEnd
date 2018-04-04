@@ -45,6 +45,7 @@ class FriendsPage extends Component {
 
     return (
       <div>
+        <h1>Your Friends</h1>
         <div className='friendArea' style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr'}}>
             {this.props.friends[0] !=='start' && this.props.friends.map(f => <FriendItem key={f.id} label='Remove' buttonAction={this.handleRemoveFriend} friend={f}/>)}
         </div>
