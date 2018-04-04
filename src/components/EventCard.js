@@ -124,7 +124,7 @@ class eventCard extends Component {
 
   handleEventCreation(e) {
     let to_schedule = e
-     var request = gapi.client.request({
+     var request = window.gapi.client.request({
      'method': 'POST',
      'path': "https://www.googleapis.com/calendar/v3/calendars/primary/events",
      'headers': {
@@ -138,17 +138,17 @@ class eventCard extends Component {
    })
    .then(function(response) {
    if (response.result.kind) {
-     alert("Google Calendar event created!")
+     window.alert("Google Calendar event created!")
    }
    }, function(reason) {
   console.log(reason.result)
    console.log('Error: ' + reason.result.error.message)
    if (reason.result.error.message === "Login Required") {
-     alert("Sign in first, then try again!")
-     gapi.auth2.getAuthInstance().signIn();
+     window.alert("Sign in first, then try again!")
+     window.gapi.auth2.getAuthInstance().signIn();
       }
     else {
-      alert("Google calendar event created!")
+      window.alert("Google calendar event created!")
     }
     })
 
