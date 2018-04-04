@@ -18,6 +18,13 @@ class LoginSignup extends Component {
     mode: 'neutral'
   }
 
+  componentDidMount() {
+    const token = localStorage.getItem('token')
+      if (token) {
+        this.props.history.push('/dashboard')
+      }
+  }
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
@@ -151,13 +158,11 @@ class LoginSignup extends Component {
     )
   }
 }
-export default connect(null, {login, loadData})(LoginSignup)
-//
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     login: (u) => dispatch({type: "LOGIN", user: u}),
-//     loadData
-//   }
-// }
 
-// export default connect(null, mapDispatchToProps)(LoginSignup)
+const mapStateToProps = (state) => {
+  return {
+    user_id: state.user.id,
+  }
+}
+
+export default connect(mapStateToProps, {login, loadData})(LoginSignup)
